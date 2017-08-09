@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int m*;
+long long int *m;
 
-void myPrint(int n){
-	printf("The number is %d!\n", n);
+void myPrint(long long int n){
+	printf("The number is %lli!\n", n);
 }
 
-int fib(int n){
+long long int fib(int n){
 	if(n == 0)
 		return m[0];
 	if(n == 1)
@@ -19,9 +19,12 @@ int fib(int n){
 }
 
 int main(){
-	m = (int *) malloc(1111111*sizeof(int));
+	m = (long long int *) malloc(100*sizeof(long long int));
+	int i;
+	for(i = 0; i < 100; ++i)
+		m[i] = -1;
 	m[0] = 0;
 	m[1] = 1;
-	myPrint(fib(666));
+	myPrint(fib(92));
 	return 0;
 }
